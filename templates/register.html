@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% load crispy_forms_tags %},
+<div class="row justify-content-md-center">
+    <h3>REGISTER</h3>
+</div>
+<div class="row justify-content-md-center">
+    <form method = "post">
+        {% csrf_token %}
+        {{form|crispy}} <!-- as_p is to show form on screen -->
+        <br>
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+</div>
+
+    
+    
+
+
+{% endblock body %}

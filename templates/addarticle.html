@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block body %}
+{% load crispy_forms_tags %}
+    <div class="row justify-content-md-center">
+    <h3>ADD ARTICLE</h3>
+    </div>
+    <div class="row justify-content-md-center">
+        
+
+        <form method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.media}}
+            {{form |crispy}} <!-- to use crispy forms -->
+            <br>
+            <button type="submit" class="btn btn-primary">Add Article</button>
+        </form>
+    </div>
+
+{% endblock body %}

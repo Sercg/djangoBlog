@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <div class ="jumbotron text-center">
+        <h3>Welcome To My Blog</h3>
+        <p>This is my first blog</p>
+    </div>
+    {% if request.user.is_authenticated %}
+        User Authenticated : {{request.user.username}}
+    {% else %}
+        User NOT Authenticated
+    {% endif %}
+   
+{% endblock body %}

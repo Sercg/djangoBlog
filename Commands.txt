@@ -1,0 +1,49 @@
+from django.contrib.auth.models import User
+from article.models import Article
+User
+Article
+newUser = User(username = "testUser",password = "123456")
+newUser.save()
+lst = User.objects.all()
+print lst
+print(lst)
+newUser2 = User(username="testUser2")
+newUser2.set_password("123456")
+print(lst)
+newUser2.save()
+print(lst)
+newuser3=User()
+newuser3.username="testUser3"
+newuser3.set_password("123456")
+newuser3.firstname="Test"
+newuser3.first_name="Test"
+newuser3.save()
+print(lst)
+article1 = Article(title="Shell Article",content="Content From Shell", author = newuser3)
+article1.save()
+article2 = Article()
+article2.title = "Another Shell Article"
+article2.content ="Shell article content"
+article2.author =newUser2
+article2.save()
+Article.objects.create(title="Last shell article", content="A lot of stuff", author=newUser1)
+Article.objects.create(title="Last shell article", content="A lot of stuff", author="hsolo")
+Article.objects.create(title="Last shell article", content="A lot of stuff", author = newuser3)
+Article.objects.all()
+Article.objects.get(title = "Article1")
+article10=Article.objects.get(title = "Article1")
+article10.content
+article10.content()
+article10
+article10.titl
+article10.title
+article10.content
+article10.delete()
+article = Article.objects.get(id=3)
+article = Article.objects.get(id=4)
+article.title
+article.content
+h
+history
+Article.objects.filter(title__contains = "shell")
+history
